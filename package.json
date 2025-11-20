@@ -1,5 +1,5 @@
 {
-  "name": "geogieoddae",
+  "name": "geogieoddae-vue",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.22"
+    "element-plus": "^2.11.8",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
