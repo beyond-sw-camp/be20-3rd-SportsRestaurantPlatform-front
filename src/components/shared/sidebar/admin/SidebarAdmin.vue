@@ -180,7 +180,7 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
               v-for="subItem in menu.subItems"
               :key="subItem.id"
               class="submenu-item"
-              :class="{ active: activeSubMenu === subItem.name && activeMenu === menu.name }"
+              :class="{ active: activeMenu === menu.name }"
               @click="handleSubMenuClick(menu.name, subItem)"
           >
             {{ subItem.name }}
@@ -196,7 +196,7 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
               v-for="subItem in menu.subItems"
               :key="subItem.id"
               class="submenu-item"
-              :class="{ active: activeSubMenu === subItem.name && activeMenu === menu.name }"
+              :class="{ active: activeMenu === menu.name }"
               @click="handleSubMenuClick(menu.name, subItem)"
           >
             {{ subItem.name }}

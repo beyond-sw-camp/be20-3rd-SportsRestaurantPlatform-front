@@ -13,7 +13,7 @@
             <el-table-column prop="userPhoneNumber" label="전화번호" />
             <el-table-column label="상세보기">
                 <template #default="scope">
-                    <el-button type="text" @click="viewDetails(scope.row.id)">보기</el-button>
+                    <el-button type="text" @click="viewDetails(scope.row.userCode)">보기</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -27,14 +27,34 @@
                 layout="prev, pager, next"
             />
         </div>
+        <!-- 회원 상세보기 -->
+        <el-dialog
+            v-model="isDetailVisible"
+            title="회원 상세 정보"
+            width="50%"
+        >
+            <!--  MemberDetailView 컴포넌트 -->
+            <MemberDetailView :userDetail="userDetail" />
+
+            <!-- 모달 하단 버튼 -->
+            <template #footer>
+                <span class="dialog-footer">
+                <el-button @click="isDetailVisible = false">닫기</el-button>
+                </span>
+            </template>
+        </el-dialog>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { fetchUsers, searchUsers } from '@/api/user'
+import { fetchUsers, searchUsers, fetchUserDetail } from '@/api/user'
+import MemberDetailView from './MemberDetailView.vue'
 
-const members = ref([])
+const members = ref([])             // 전체 회원 정보 
+const userDetail = ref(null);       // 회원 상세 정보 상태
+const isDetailVisible = ref(false); // 상세보기 모달 가시성 상태
+
 const pageInfo = ref({
     page: 1,
     size: 10,
@@ -82,6 +102,19 @@ const searchMembers = async (page = 1) => {
     }
 }
 
+const viewDetails = async (userCode) => {
+    try {
+        const response = await fetchUserDetail(userCode); // userCode를 직접 전달
+        userDetail.value = response.data.data;
+        isDetailVisible.value = true; // 모달 표시
+        console.log('Fetching details for userCode:', userCode)
+        console.log('API response : ', response.data.data);
+        console.log('userDetailVisible : ', isDetailVisible.value);
+    } catch (error) {
+        console.error('회원 상세 정보를 가져오는 중 오류 발생:', error);
+    }
+}
+
 // 초기 데이터 로드
 fetchMembers()
 </script>
@@ -103,5 +136,9 @@ fetchMembers()
   display: flex;
   justify-content: center;
   padding: 20px 0;
+}
+
+.dialog-footer {
+    text-align: right;
 }
 </style>
