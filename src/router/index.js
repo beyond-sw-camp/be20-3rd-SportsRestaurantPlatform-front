@@ -1,13 +1,11 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import RestaurantRegisterView from '@/views/restaurant/RestaurantRegisterView.vue'
-import ComponentDemoView from "@/views/ComponentDemoView.vue";
 import RestaurantListView from "@/views/restaurant/RestaurantListView.vue";
 import RestaurantListDetailedView from "@/views/restaurant/RestaurantListDetailedView.vue";
 import ViewingRegisterView from "@/views/viewing/ViewingRegisterView.vue";
 import ViewingListView from "@/views/viewing/ViewingListView.vue";
 import ViewingListDetailedView from "@/views/viewing/ViewingListDetailedView.vue";
 import MyPageViewingLog from "@/views/mypage/MyPageViewingLog.vue";
-import AppClone from "@/AppClone.vue";
 import MyPageSubscribeCancel from "@/views/mypage/MyPageSubscribeCancel.vue";
 import MyPageSubscribeCancelConfirm
   from "@/views/mypage/MyPageSubscribeCancelConfirm.vue";
@@ -20,9 +18,16 @@ import MyPageBookMark from "@/views/mypage/MyPageBookMark.vue";
 import MyPageReviewEdit from "@/views/mypage/MyPageReviewEdit.vue";
 import MyPageSubscribeRegister
   from "@/views/mypage/MyPageSubscribeRegister.vue";
+import ComponentSample from "@/views/ComponentSample.vue";
+import ViewingManage from "@/views/admin/ViewingManage.vue";
+import RestaurantManage from "@/views/admin/RestaurantManage.vue";
+import KeywordReport from "@/views/admin/KeywordReport.vue";
+import KeywordNotice from "@/views/admin/KeywordNotice.vue";
+import Announcement from "@/views/admin/announcement/Annoncement.vue";
+import KeywordRestaurant from "@/views/admin/KeywordRestaurant.vue";
+import KeywordSports from "@/views/admin/KeywordSports.vue";
 const routes = [
     {path: '/restaurant/register', name: 'RestaurantRegister', component: RestaurantRegisterView},
-    {path: '/', name: 'ComponentDemo', component: ComponentDemoView },
     {path: '/restaurant', name: 'RestaurantList',component: RestaurantListView},
     {path: '/restaurant/detailed/:id', name: 'RestaurantListDetailed',component: RestaurantListDetailedView},
     {path: '/viewing/register', name: 'ViewingRegister',component: ViewingRegisterView},
@@ -30,7 +35,6 @@ const routes = [
     {path: '/viewing/detailed/:id', name: 'ViewingListDetailed',component: ViewingListDetailedView},
     {path:'/MyPage/ProfileEdit',name:'MyPage-ProfileEdit',component:MyPageViewingLog},
     {path:'/MyPage/ViewingLog',name:'MyPage-ViewingLog',component:MyPageViewingLog},
-    {path:'/AppClone',name:'App-Clone',component:AppClone},
     {path:'/MyPage/Subscribe/Cancel',name:'MyPage-SubscribeCancel',component:MyPageSubscribeCancel},
     {path:'/MyPage/Subscribe/CancelConfirm',name:'MyPage-SubscribeCancelConfirm',component:MyPageSubscribeCancelConfirm},
     {path:'/MyPage/Subscribe/Log',name:'MyPage-SubscribeLog',component:MyPageSubscribeLog},
@@ -40,6 +44,46 @@ const routes = [
     {path:'/MyPage/BookMark',name:'MyPage-BookMark',component:MyPageBookMark},
     {path:'/MyPage/Review/Edit',name:'MyPage-ReviewEdit',component:MyPageReviewEdit},
     {path:'/MyPage/Subscribe/Register',name:'MyPage-SubscribeRegister',component:MyPageSubscribeRegister},
+    {
+        path: '/ComponentSample',               // http://localhost:5173/ComponentSample
+        name: 'ComponentSample',
+        component: ComponentSample,   // 예전 App.vue에 있던 메인 화면
+    },
+    {
+        path: '/admin/ViewingManage',    // http://localhost:5173/admin/restaurant
+        name: 'ViewingManage',
+        component: ViewingManage,  // 관람 관리 페이지
+    },
+    {
+        path: '/admin/RestaurantManage',
+        name: 'RestaurantManage',
+        component: RestaurantManage, // 가게 관리 페이지
+    },
+    {
+        path: '/admin/KeywordReport',
+        name: 'KeywordReport',
+        component: KeywordReport,  // 신고 키워드 관리 페이지
+    },
+    {
+        path: '/admin/KeywordNotice',
+        name: 'KeywordNotice',
+        component: KeywordNotice, // 알림 키워드 관리 페이지
+    },
+    {
+        path: '/admin/KeywordRestaurant',
+        name: 'KeywordRestaurant',
+        component: KeywordRestaurant,  // 가게 키워드 관리 페이지
+    },
+    {
+        path: '/admin/KeywordSports',
+        name: 'KeywordSports',
+        component: KeywordSports,  // 스포츠 키워드 관리 페이지
+    },
+    {
+        path: '/admin/announcement/Announcement',
+        name: 'Announcement',
+        component: Announcement,  // 공지사항 관리 페이지
+    },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,3 +91,6 @@ const router = createRouter({
 })
 
 export default router
+
+
+
