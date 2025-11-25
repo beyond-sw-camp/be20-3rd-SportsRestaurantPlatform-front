@@ -9,7 +9,6 @@
             </div>
         </div>
     </div>
-    
 </template>
 
 <script setup>
@@ -24,7 +23,6 @@ const headerText = ref('회원 관리 - 일반')
 const updateHeader = (newHeader) => {
     headerText.value = newHeader
 }
-
 </script>
 
 <style scoped>

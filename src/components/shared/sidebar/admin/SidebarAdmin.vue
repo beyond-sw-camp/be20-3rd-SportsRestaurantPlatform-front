@@ -12,7 +12,6 @@ const emit = defineEmits(['update-header'])
 
 // 현재 선택된 메뉴
 const activeMenu = ref('회원 관리')
-const activeSubMenu = ref('일반')
 const showSubmenu = ref(false)
 
 // ====== 메뉴 데이터 ======
@@ -130,8 +129,6 @@ const handleMenuClick = (menu) => {
 
 const handleSubMenuClick = (parentMenu, subMenu) => {
   activeMenu.value = parentMenu
-  activeSubMenu.value = subMenu.name
-<<<<<<< HEAD
 
   if (parentMenu === '회원 관리') {
     const path = menuRoutes.member?.[subMenu.id]
@@ -143,10 +140,8 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
     const path = menuRoutes.category?.[subMenu.id]
     if (path) router.push(path)
   }
-=======
   console.log(`하위메뉴 클릭: ${parentMenu} > ${subMenu.name}`)
   emit('update-header', `${parentMenu} - ${subMenu.name}`)
->>>>>>> d9ca4b8 (feat: 관리자 로그인 & 대쉬보드 기본틀 구현 & axios & proxy 설정 등)
 }
 </script>
 

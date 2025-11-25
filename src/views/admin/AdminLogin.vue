@@ -94,7 +94,7 @@ const handleLogin = async () => {
         // 로그인 성공시 세션스토리지에 JWT토큰정보 저장
         sessionStorage.setItem('adminToken', response.data.data.accessToken);
         // 로그인 성공 시 대시보드로 이동
-        router.push('/admin/dashboard')
+        router.push('/admin/user-view')
     } else {
         // 로그인 실패
         const { errorField, message } = response.data
