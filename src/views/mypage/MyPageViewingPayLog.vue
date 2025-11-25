@@ -4,7 +4,6 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import SidebarUser from "@/components/shared/sidebar/user/SidebarUser.vue";
 import Label from "@/components/shared/basic/Label.vue";
 import Checkbox from "@/components/shared/form/Checkbox.vue";
-import {viewingPayList} from "@/api/api.js";
 
 const payments = ref([
   {
