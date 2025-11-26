@@ -1,29 +1,31 @@
 import axios from './axios'
 
-// 회원 목록 조회 API
-export const fetchUsers = (page = 1, size = 10) => {
-    const token = sessionStorage.getItem('adminToken'); // 저장된 토큰 가져오기
-    return axios.get('/api/admin/users-view', { 
-        params: { page, size },
-        headers: {
-            Authorization: `Bearer ${token}`    // Authorization 헤더에 토큰 추가
-        }
-    });
-};
+// 관리자 요청 토큰
+const getToken = () => sessionStorage.getItem('adminToken')
 
-// // 권한 별 회원 목록 조회
-// export const fetchUsersByRole = (page, size, subMenuName) => {
-//     return axios.get(`/api/admin/users-by-role`, {
-//         params: { page, size, subMenuName },
-//         headers: {
-//             Authorization: `Bearer ${token}`    // Authorization 헤더에 토큰 추가
-//         }
-//     });
-// };
+// 회원 목록 조회 (role이 있으면 role 전용 엔드포인트 사용)
+export const fetchUsers = (page = 1, size = 10, userRole = null) => {
+  const token = getToken()
+  if (userRole) {
+    return axios.get('/api/admin/users-view-by-role', {
+      params: { page, size, userRole },
+      headers: { Authorization: `Bearer ${token}` }
+    })
+  }
+  return axios.get('/api/admin/users-view', {
+    params: { page, size },
+    headers: { Authorization: `Bearer ${token}` }
+  })
+}
+
+// 회원 권한별 조회(선택적 wrapper)
+export const fetchUsersByRole = (userRole, page = 1, size = 10) => {
+  return fetchUsers(page, size, userRole)
+}
 
 // 회원 검색
 export const searchUsers = (page, size, searchQuery) => {
-    const token = sessionStorage.getItem('adminToken'); // 저장된 토큰 가져오기
+    const token = getToken()
     return axios.get('/api/admin/users-search', {
         params: {
             page,
@@ -38,12 +40,18 @@ export const searchUsers = (page, size, searchQuery) => {
     });
 };
 
-// 회원 상세 조회 API
+// 회원 상세 조회
 export const fetchUserDetail = (userCode) => {
-    const token = sessionStorage.getItem('adminToken'); // 저장된 토큰 가져오기
-    return axios.get(`/api/admin/users/${userCode}`, {
-        headers: {
-            Authorization: `Bearer ${token}`    // Authorization 헤더에 토큰 추가
-        }
-    });
-};
+  const token = getToken()
+  return axios.get(`/api/admin/users/${userCode}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  })
+}
+
+// 사업자 상세 조회
+export const fetchEntrepreneurDetail = (userCode) => {
+  const token = getToken()
+  return axios.get(`/api/admin/users/entrepreneurs/${userCode}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  })
+}

@@ -1,15 +1,19 @@
 <script setup>
-// 라우터뷰만 사용
+import Navbar from '@/components/shared/navbar/Navbar.vue'
 </script>
 
 <template>
-  <!-- router-view만 사용 -->
-  <router-view />
+  <Navbar />
+
+  <!-- 고정 네비바를 피하기 위한 안전 영역 -->
+  <div class="page-container">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
 .page-container {
-  padding-top: 60px; /* 네비바 높이 70px + 여유 20px */
+  padding-top: 80px; /* 네비바 높이 70px + 여유 20px */
   min-height: 100vh;
   box-sizing: border-box;
 }

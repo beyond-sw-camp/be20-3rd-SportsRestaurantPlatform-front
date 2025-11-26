@@ -7,11 +7,11 @@
       </aside>
 
       <main class="admin-content">
-        <h1 class="page-title">회원관리 - 일반</h1>
+        <h1 class="page-title">회원관리 - 사업자</h1>
 
         <!-- 공지 리스트 + 검색/작성 영역 -->
         <section class="notice-section">
-          <MemberListView />
+          <EntrepreneurListView />
         </section>
       </main>
     </div>
@@ -21,7 +21,7 @@
 
 <script setup>
 import SidebarAdmin from '@/components/shared/sidebar/admin/SidebarAdmin.vue';
-import MemberListView from './MemberListView.vue';
+import EntrepreneurListView from './EntrepreneurListView.vue';
 
 </script>
 

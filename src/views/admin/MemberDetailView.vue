@@ -27,7 +27,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 
 // 부모 컴포넌트에서 전달받은 회원 상세 정보
 defineProps({

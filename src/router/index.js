@@ -5,6 +5,7 @@ import SignupAdditional from '@/views/auth/SignupAdditional.vue'
 import SignupComplete from '@/views/auth/SignupComplete.vue'
 import LoginSuccess from '@/views/auth/LoginSuccess.vue'
 import AdminUserView from '@/views/admin/AdminUserView.vue'
+import AdminEntrepreneurView from '@/views/admin/AdminEntrepreneurView.vue'
 import RestaurantRegisterView from '@/views/restaurant/RestaurantRegisterView.vue'
 import RestaurantListView from "@/views/restaurant/RestaurantListView.vue";
 import RestaurantListDetailedView from "@/views/restaurant/RestaurantListDetailedView.vue";
@@ -47,6 +48,11 @@ const routes = [
       path: '/admin/user-view',
       name: 'AdminUserView',
       component: AdminUserView
+    },
+    {
+      path: '/admin/entrepreneur-view',
+      name: 'AdminEntrepreneurView',
+      component: AdminEntrepreneurView
     },
     {
       path: '/signup/additional',

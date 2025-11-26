@@ -7,11 +7,8 @@ const router = useRouter()
 const route = useRoute()
 
 // ====== 상태 ======
-// defineEmits 선언 - header메뉴
-const emit = defineEmits(['update-header'])
-
-// 현재 선택된 메뉴
 const activeMenu = ref('회원 관리')
+const activeSubMenu = ref('일반')
 const showSubmenu = ref(false)
 
 // ====== 메뉴 데이터 ======
@@ -20,8 +17,8 @@ const menuItems = [
     id: 'member',
     name: '회원 관리',
     subItems: [
-      { id: 'user', name: '일반' },
-      { id: 'entrepreneur', name: '사업자' }
+      { id: 'general', name: '일반' },
+      { id: 'business', name: '사업자' }
     ]
   },
   { id: 'ViewingManage', name: '관람 관리' },
@@ -46,8 +43,8 @@ const menuRoutes = {
   announcement: '/admin/announcement/Announcement',              // 공지사항
 
   member: {
-    general: '/admin/member/general',   // 회원 관리 - 일반
-    business: '/admin/member/business', // 회원 관리 - 사업자
+    general: '/admin/user-view',   // 회원 관리 - 일반
+    business: '/admin/entrepreneur-view', // 회원 관리 - 사업자
   },
   category: {
     restaurant: '/admin/keywordRestaurant',        // 키워드 관리 - 가게
@@ -129,6 +126,7 @@ const handleMenuClick = (menu) => {
 
 const handleSubMenuClick = (parentMenu, subMenu) => {
   activeMenu.value = parentMenu
+  activeSubMenu.value = subMenu.name
 
   if (parentMenu === '회원 관리') {
     const path = menuRoutes.member?.[subMenu.id]
@@ -140,8 +138,6 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
     const path = menuRoutes.category?.[subMenu.id]
     if (path) router.push(path)
   }
-  console.log(`하위메뉴 클릭: ${parentMenu} > ${subMenu.name}`)
-  emit('update-header', `${parentMenu} - ${subMenu.name}`)
 }
 </script>
 
@@ -180,7 +176,7 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
               v-for="subItem in menu.subItems"
               :key="subItem.id"
               class="submenu-item"
-              :class="{ active: activeMenu === menu.name }"
+              :class="{ active: activeSubMenu === subItem.name && activeMenu === menu.name }"
               @click="handleSubMenuClick(menu.name, subItem)"
           >
             {{ subItem.name }}
@@ -196,7 +192,7 @@ const handleSubMenuClick = (parentMenu, subMenu) => {
               v-for="subItem in menu.subItems"
               :key="subItem.id"
               class="submenu-item"
-              :class="{ active: activeMenu === menu.name }"
+              :class="{ active: activeSubMenu === subItem.name && activeMenu === menu.name }"
               @click="handleSubMenuClick(menu.name, subItem)"
           >
             {{ subItem.name }}
