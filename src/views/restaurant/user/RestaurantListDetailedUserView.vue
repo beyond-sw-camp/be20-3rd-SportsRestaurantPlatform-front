@@ -131,7 +131,11 @@
       <Button class="page-btn" @click="nextPage" :disabled="page===totalPages">&gt;</Button>
     </div>
 
-
+    <!-- 하단 버튼 -->
+    <div class="bottom-actions">
+      <Button class="delete-btn">삭제</Button>
+      <Button class="edit-btn" type="primary">수정</Button>
+    </div>
 
     <!-- Lightbox -->
     <ImageLightbox

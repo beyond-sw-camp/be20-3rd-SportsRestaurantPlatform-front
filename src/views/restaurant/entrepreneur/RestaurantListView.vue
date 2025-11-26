@@ -81,7 +81,7 @@
             :key="store.restaurantCode"
         >
           <router-link
-              :to="{ name: 'RestaurantListDetailed', params: { id: store.restaurantCode } }">
+              :to="{ name: 'RestaurantListDetailedEntrepreneur', params: { id: store.restaurantCode } }">
             <img :src="getImageUrl(store.pictureUrls)" class="store-img" />
           </router-link>
 
@@ -123,7 +123,7 @@
 
       <!-- 등록 버튼 -->
       <div class="register-row">
-        <Button type="primary" @click="$router.push('/entrepreneur/restaurant')">
+        <Button type="primary" @click="$router.push('/entrepreneur/restaurant/register')">
           가게 등록하기
         </Button>
       </div>
