@@ -11,13 +11,13 @@
 
       <!-- 가게 / 관람 메뉴 -->
       <div class="menu-group">
-        <router-link to="/restaurant" custom v-slot="{ href, navigate, isActive }">
+        <router-link to="/user/restaurant" custom v-slot="{ href, navigate, isActive }">
           <a :href="href" @click="navigate" class="menu-btn" :class="{ active: isActive }">
             가게
           </a>
         </router-link>
 
-        <router-link to="/viewing" custom v-slot="{ href, navigate, isActive }">
+        <router-link to="/user/viewing" custom v-slot="{ href, navigate, isActive }">
           <a :href="href" @click="navigate" class="menu-btn" :class="{ active: isActive }">
             관람
           </a>
@@ -29,8 +29,11 @@
 
       <!-- 유저 정보 -->
       <div class="user-section">
-        <span>{{ userName }}님</span>
+        <router-link to="/MyPage/ProfileEdit" custom v-slot="{ href, navigate, isActive }">
+          <a :href="href" @click="navigate" class="menu-btn" :class="{ active: isActive }">
+        {{ userName }}님</a>
         <span class="divider">/</span>
+        </router-link>
         <button class="logout-btn">로그아웃</button>
       </div>
     </nav>
