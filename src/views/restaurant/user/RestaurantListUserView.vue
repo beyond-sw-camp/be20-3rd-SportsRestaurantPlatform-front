@@ -81,7 +81,7 @@
             :key="store.restaurantCode"
         >
           <router-link
-              :to="{ name: 'RestaurantListDetailed', params: { id: store.restaurantCode } }">
+              :to="{ name:'RestaurantListDetailedUser', params: { id: store.restaurantCode } }">
             <img :src="getImageUrl(store.pictureUrls)" class="store-img" />
           </router-link>
 
