@@ -65,5 +65,8 @@ export const getUserDetail = async (userCode) => {
     const res = await api.get(`/api/admin/users/${userCode}`);
     return res.data.data; // ApiResponse.success(data)
 };
+export async function getNotification(userCode){
+  return  await api.get(`/api/notification/${userCode}`);
+}
 
 

@@ -42,17 +42,18 @@ const handleSubmit = async () => {
 
     entrepreneurCertificateUrl:"qwer1234",
     entrepreneurBankAccount:Number(accountNumber.value),//문자로 변경 필요 엔티티
-    userCode:6,
+    userCode:21,
     // TODO: 사업자 등록증 파일도 업로드하면 여기서 같이 붙이기
   };
 
   try {
     isSubmitting.value = true;
+    ElMessage.success("사업자 등록 신청 전");
     await entrepreneurRegister(dto);
 
     ElMessage.success("사업자 등록증 신청이 완료되었습니다.");
-    await entrepreneurChangeUserRole(6,"ENTREPRENEUR")// 백엔드로 DTO 전송
-
+    await entrepreneurChangeUserRole(21,"ENTREPRENEUR")// 백엔드로 DTO 전송
+    ElMessage.success("유저 변경이 완료되었습니다.");
     // 성공 후 초기화가 필요하면 여기서 초기화
     // businessNo.value = "";
     // accountNumber.value = "";
