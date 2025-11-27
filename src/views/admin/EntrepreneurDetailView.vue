@@ -22,19 +22,19 @@
 
         <el-col :span="12">
           <el-form-item label="사업자 계좌번호">
-            <el-input v-model="form.accountNumber" />
+            <el-input v-model="form.entrepreneurBankAccount" />
           </el-form-item>
 
           <el-form-item label="사업자 등록번호">
-            <el-input v-model="form.businessNumber" />
+            <el-input v-model="form.entrepreneurId" />
           </el-form-item>
 
           <el-form-item label="사업자 등록 URL">
-            <el-input v-model="form.businessUrl" />
+            <el-input v-model="form.entrepreneurCertificateUrl" />
           </el-form-item>
 
           <el-form-item label="사업자 활성화 상태">
-            <el-select v-model="form.activationStatus" placeholder="선택">
+            <el-select v-model="form.entrepreneurStatus" placeholder="선택">
               <el-option label="승인" value="APPROVED" />
               <el-option label="대기" value="WAITING" />
               <el-option label="거절" value="REJECTED" />
@@ -70,10 +70,10 @@ const form = reactive({
   userEmail: '',
   userPhoneNumber: '',
   userAddress: '',
-  accountNumber: '',
-  businessNumber: '',
-  businessUrl: '',
-  activationStatus: ''
+  entrepreneurBankAccount: '',
+  entrepreneurId: '',
+  entrepreneurCertificateUrl: '',
+  entrepreneurStatus: ''
 })
 
 // update form whenever prop changes
@@ -86,11 +86,11 @@ watch(
     form.userEmail = val.userEmail ?? ''
     form.userPhoneNumber = val.userPhoneNumber ?? ''
     // backend field names may differ; adapt if needed
-    form.userAddress = val.userAddress ?? val.address ?? ''
-    form.accountNumber = val.accountNumber ?? val.businessAccountNumber ?? ''
-    form.businessNumber = val.businessNumber ?? val.businessRegNumber ?? ''
-    form.businessUrl = val.businessUrl ?? ''
-    form.activationStatus = val.activationStatus ?? val.userRole ?? ''
+    form.userAddress = val.userAddress ?? ''
+    form.entrepreneurBankAccount = val.entrepreneurBankAccount ?? ''
+    form.entrepreneurId = val.entrepreneurId ?? ''
+    form.entrepreneurCertificateUrl = val.entrepreneurCertificateUrl ?? ''
+    form.entrepreneurStatus = val.entrepreneurStatus ?? ''
   },
   { immediate: true }
 )

@@ -79,25 +79,6 @@ const searchQuery = ref({
     activationStatus: ''
 })
 
-// const fetchUsersByRoleMembers = async (page = 1, size = pageInfo.value.size) => {
-//   try {
-//     const role = userRole
-//     const response = await fetchUsers(page, size, role)
-//     members.value = response.data.data.users || []
-//     console.log('members : ', members.value)
-
-//     const apiPageInfo = response.data.data.pageInfo || {}
-//     pageInfo.value = {
-//         page: apiPageInfo.page || 1,
-//         size: apiPageInfo.size || 10,
-//         totalElements: apiPageInfo.totalElements || 0
-//     }
-//     console.log('pageInfo : ', pageInfo.value)
-//   } catch (error) {
-//     console.error('회원 목록을 가져오는 중 오류 발생:', error)
-//   }
-// }
-
 const fetchUsersByRoleMembers = async (page = 1, size = pageInfo.value.size) => {
     try {
         const role = userRole
