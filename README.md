@@ -1,23 +1,23 @@
-# 한화시스템 Beyond SW 20기 백엔드 프로젝트 — 거기어때?
+# 한화시스템 Beyond SW 20기 프론트엔드 프로젝트 — 거기어때?
 
 <img width="1124" height="581" alt="Image" src="https://github.com/user-attachments/assets/f7965036-ef64-4dbb-9ddc-198d322ed567" />
 
-> 스포츠단체관람을 위해 음식점을 통대관할수 있게 도와주는 서비스
+> 스포츠단체관람을 위해 음식점을 대관할수 있게 도와주는 서비스
 
 ---
 
 ## 👥 팀 구성
 
-| 이름 | 역할 | 주요 기술 |
-|---|---:|---|
-| 박규진 | 관람, 식당 백엔드 및 총괄 | Java, Spring Boot, JPA, Mybatis | 
-| 박인수 | 결제, 알림 백엔드 | Java, Spring Boot, JPA, Mybatis | 
-| 김성현 | 인증/인가 백엔드 | Java, Spring Boot, JPA, Mybatis | 
-| 성현제 | 공지사항, 신고 백엔드 | Java, Spring Boot, JPA, Mybatis |
+| 이름 | 역할 | 
+|---|---:|
+| 박규진 | 관람, 인증/인가, 가게, 스포츠 키워드 백엔드 및 프론트엔드 |
+| 박인수 | 결제, 알림 백엔드 및 프론트엔드 |
+| 김성현 | 인증/인가 백엔드 및 프론트엔드 |
+| 성현제 | 공지사항, 신고, 키워드 백엔드 및 프론트엔드 | 
 
 ---
 
-## 🛠️ 기술스택택
+## 🛠️ 기술스택
 
 ### 백엔드
 <a href="https://spring.io/" target="_blank"><img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"></a>
@@ -27,6 +27,12 @@
 <a href="https://hibernate.org/" target="_blank"><img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white" alt="Hibernate(Spring Data JPA)"></a>
 <a href="https://mariadb.org/" target="_blank"><img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="MariaDB"></a>
 <a href="https://www.jwt.io/" target="_blank"><img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="JWT"></a>
+
+### 프론트엔드
+<a href="https://vuejs.org/" target="_blank"><img src="https://img.shields.io/badge/vue.js-%234FC08D.svg?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"></a>
+<a href="https://vitejs.dev/" target="_blank"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"></a>
+<a href="https://pinia.vuejs.org/" target="_blank"><img src="https://img.shields.io/badge/pinia-%23FFD859.svg?style=for-the-badge&logo=vue.js&logoColor=black" alt="Pinia"></a>
+<a href="https://axios-http.com/" target="_blank"><img src="https://img.shields.io/badge/axios-%235A29E4.svg?style=for-the-badge&logo=axios&logoColor=white" alt="Axios"></a>
 
 ---
 ## ✏️ 프로젝트 개요
@@ -99,77 +105,94 @@
 | 점주   | 📊 예약 관리           | 예약 내역, 메뉴 준비 관리                         |
 | 결제   | 💳 카드/계좌 결제      | 예약금 환불 제도, 점주 구독 결제     
 ---
-
-
-
-## 📄 요구사항명세서·WBS (Google Sheets)
+ ## 🎨 Figma
 
 <details>
-  <summary>요구사항명세서</summary>
-    https://docs.google.com/spreadsheets/d/1fdSv-AS8EdeEeRGrgxjWvRoyUO11oDH1wEkOj6HnHXg/edit?gid=1436566125#gid=1436566125
-<img width="1623" height="1025" alt="Image" src="https://github.com/user-attachments/assets/3625dc9a-fdb3-4daf-8bea-8ef111ca2c6c" />
-<img width="1624" height="887" alt="Image" src="https://github.com/user-attachments/assets/99049308-92f7-4af3-a1e2-475bac665c40" />
-<img width="1623" height="1057" alt="Image" src="https://github.com/user-attachments/assets/df012088-0d65-4465-9057-b291770bb277" />
+<summary>📌 Figma 링크</summary>
+
+[Figma 디자인 바로가기](https://www.figma.com/design/2WZAUw0X96wdfJo7NW658d/%EA%B1%B0%EA%B8%B0%EC%96%B4%EB%95%8C?node-id=0-1&t=G0KzVwpoIKokFKQq-1)
+
 </details>
 
-## 📄 DDD (miro)
-
-<details>
-   <summary>DDD</summary>
-     https://miro.com/app/board/uXjVJ5lwdoc=/
-<img width="1730" height="1083" alt="Image" src="https://github.com/user-attachments/assets/f6311ce3-3f07-4175-898f-e4c5e25978f9" />
-</details>
-
-
-## 📄 ERD (ERDCloud)
-
-<details>
-   <summary>ERD</summary>
-     [https://www.erdcloud.com/d/BheLqjBhttiyWkdZj](https://www.erdcloud.com/d/A9A6aT89xQCdqGfiH)
-   
-  <img width="1516" height="795" alt="Image" src="https://github.com/user-attachments/assets/10ae4370-2ba3-4a85-b5fa-124cf6313740" />
-</details>
-
-  
- ## 📄POST MAN
  
- <details>
-    <summary>POST MAN</summary>
-https://www.postman.com/tjdguswp333-9617076/be20-geogieodae/collection/imgd5tf/geogieoddae?action=share&creator=49562230
+ ## 📄 화면설계서
+
+<details>
+<summary>📌 화면설계서 링크</summary>
+    
+[화면설계서 바로가기](https://docs.google.com/spreadsheets/d/1Y6QuE7FqptARRfmkT5Twm4bjAIxCVFOeq9tUOiIozq4/edit?usp=sharing)
+
+</details> 
+  
+ ## 📄 기능명세서
+
+<details>
+<summary>📌 기능명세서 링크</summary>
+    
+[기능명세서 바로가기](https://docs.google.com/spreadsheets/d/1jvq1iFOCVcXmLft0bsXgoayTxTXMD8ZV0Y1lqLC6jb8/edit?usp=sharing)
+    
+</details> 
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
 </details>
 
- ## 📄Swagger
+<details>
+<summary> 관람 결제 조회</summary>
 
- <details>
-    <summary>swagger</summary>
- [Geogieoddae REST API 명세서 (PDF)](https://drive.google.com/file/d/1B4QOAC8QPX8boM1XvGrU_wPsrS5z-yL5/view?usp=sharing))
+</details>
+
+<details>
+<summary>사업자 구독결제 신청</summary>
+
+</details>
+
+<details>
+<summary>관리자 가게 추가</summary>
+
+</details>
+
+<details>
+<summary>관람 등록</summary>
+
+</details>
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
+</details>
+
+<details>
+<summary>사업자 등록 및 알림</summary>
+
+</details>
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
+</details>
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
+</details>
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
+</details>
+
+<details>
+<summary>로그인 및 회원가입</summary>
+
 </details>
 
 
- ## 📄**테스트 케이스 상세**
 
 
 
-## 팀원 회고
-<details>
- <summary> 박인수 </summary>
-
-
- </details>
-<details>
- <summary> 박규진  </summary>
-
- </details>
-<details>
- <summary> 김성현 </summary>
 
 
 
- </details>
-<details>
- <summary> 성현제 </summary>
-
-
-
- </details>
 
