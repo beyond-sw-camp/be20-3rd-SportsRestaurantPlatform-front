@@ -33,6 +33,8 @@
 <a href="https://vitejs.dev/" target="_blank"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"></a>
 <a href="https://pinia.vuejs.org/" target="_blank"><img src="https://img.shields.io/badge/pinia-%23FFD859.svg?style=for-the-badge&logo=vue.js&logoColor=black" alt="Pinia"></a>
 <a href="https://axios-http.com/" target="_blank"><img src="https://img.shields.io/badge/axios-%235A29E4.svg?style=for-the-badge&logo=axios&logoColor=white" alt="Axios"></a>
+<a href="https://www.figma.com/" target="_blank"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" /></a>
+
 
 ---
 ## ✏️ 프로젝트 개요
