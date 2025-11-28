@@ -133,65 +133,64 @@
     
 </details> 
 
+ ## 📄 주요기능 gif
+
 <details>
 <summary>로그인 및 회원가입</summary>
+
+![qr로그인](https://github.com/user-attachments/assets/d0a0d073-c075-413f-9a2a-f1015dfd1e6d)
+
+
 
 </details>
 
 <details>
-<summary> 관람 결제 조회</summary>
+<summary> 관람결제 조회</summary>
+
+![관람예약 및 결제](https://github.com/user-attachments/assets/e69f01dc-31b9-4a42-9d6c-bdaaa8168b76)
+
+
 
 </details>
 
 <details>
 <summary>사업자 구독결제 신청</summary>
 
+![사업자구독 결제과정](https://github.com/user-attachments/assets/5d3d0b6a-3a66-45e2-87e2-433e8a88304a)
+
+
 </details>
 
 <details>
 <summary>관리자 가게 추가</summary>
+
+![가게추가](https://github.com/user-attachments/assets/81311af0-2c94-4aa8-a411-7fe81fd89111)
+
 
 </details>
 
 <details>
 <summary>관람 등록</summary>
 
-</details>
+![관람등록](https://github.com/user-attachments/assets/0683c5bc-3221-4654-9afe-7365d448298d)
 
-<details>
-<summary>로그인 및 회원가입</summary>
-
-</details>
-
-<details>
-<summary>사업자 등록 및 알림</summary>
 
 </details>
 
 <details>
-<summary>로그인 및 회원가입</summary>
+<summary>사업자등록 및 알림</summary>
+
+![사업자등록 및 알림](https://github.com/user-attachments/assets/a82f9f44-a5cb-4242-9cd1-2d96f5a6f8bd)
 
 </details>
 
 <details>
-<summary>로그인 및 회원가입</summary>
+<summary>음식종류별 가게조회 필터</summary>
+
+![음식종류별 가게조회](https://github.com/user-attachments/assets/599f78b6-db47-4f1a-8c80-129c9b119c35)
+
 
 </details>
-
-<details>
-<summary>로그인 및 회원가입</summary>
-
-</details>
-
-<details>
-<summary>로그인 및 회원가입</summary>
-
-</details>
-
-
-
-
-
 
 
 
